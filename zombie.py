@@ -34,7 +34,7 @@ class Zombie:
         self.x, self.y = random.randint(MIN_X, MAX_X), 150
         self.frame = random.randint(0, 9)
         self.dir = random.choice([-1, 1])
-        self.hp = 2
+        self.hp = 2     # 좀비의 체력 : 2
         self.size = 200
 
     def update(self):
@@ -63,10 +63,10 @@ class Zombie:
         if group == 'zombie:ball':
             if not other.stopped:
                 self.hp -= 1
-                if self.hp <= 0:
+                if self.hp <= 0:        # 두 번 맞으면 좀비 사라짐
                     game_world.remove_object(self)
                 else:
-                    self.size -= self.size / 2
+                    self.size -= self.size / 2      # 날아가는 공에 맞으면 크기가 반으로 줄어듬
                     self.y = 50 + self.size / 2
         elif group == 'boy:zombie':
-            game_framework.quit()
+            game_framework.quit()       # 소년과 좀비 충돌 시 게임종료

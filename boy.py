@@ -192,4 +192,4 @@ class Boy:
         if group == 'boy:ball':
             self.ball_count += 1
         elif group == 'boy:zombie':
-            game_framework.quit()
+            game_framework.quit()           # 소년과 좀비 충돌시 게임종료

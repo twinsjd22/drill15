@@ -48,6 +48,6 @@ class Ball:
         elif group == 'grass:ball':
             self.stopped = True
         elif group == 'zombie:ball':
-            game_world.remove_object(self)
+            game_world.remove_object(self)      # 좀비와 바닥에 있는 공 충돌 시 공 사라짐
             if not self.stopped:
-                game_world.remove_object(self)
+                game_world.remove_object(self)  # 좀비와 날아가는 공 충돌 시 공 사라짐
