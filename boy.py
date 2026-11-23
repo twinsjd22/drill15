@@ -144,6 +144,7 @@ class Boy:
             game_world.add_oject(ball, 1)
             game_world.add_collision_pair('grass:ball', None, ball)
             game_world.add_collision_pair('boy:ball', None, ball)
+            game_world.add_collision_pair('zombie:ball', None, ball)
 
     def pause(self):
         self.pressed_keys.clear()
