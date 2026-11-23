@@ -68,3 +68,5 @@ class Zombie:
                 else:
                     self.size -= self.size / 2
                     self.y = 50 + self.size / 2
+        elif group == 'boy:zombie':
+            game_framework.quit()
