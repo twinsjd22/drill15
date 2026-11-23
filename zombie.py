@@ -56,7 +56,8 @@ class Zombie:
         draw_rectangle(*self.get_bb())
 
     def get_bb(self):
-        return self.x - 100, self.y - 100, self.x + 100, self.y + 100
+        h = self.size / 2
+        return self.x - h, self.y - h, self.x + h, self.y + h
 
     def handle_collision(self, group, other):
         pass
