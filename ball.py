@@ -47,3 +47,6 @@ class Ball:
             game_world.remove_object(self)  # 공을 제거
         elif group == 'grass:ball':
             self.stopped = True
+        elif group == 'zombie:ball':
+            if not self.stopped:
+                game_world.remove_object(self)
